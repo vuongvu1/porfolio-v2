@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ubuntuMono.variable} antialiased`}>
-        <Theme accentColor="iris">{children}</Theme>
+        <Theme accentColor="cyan">{children}</Theme>
       </body>
     </html>
   );
