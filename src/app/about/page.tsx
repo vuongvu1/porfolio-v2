@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import NextLink from "next/link";
-import { router } from "next/client";
+import Link from "next/link";
 import { DropdownMenu } from "@/components/ui/dropdown-menu";
 import { Button, Flex } from "@radix-ui/themes";
 import { paths } from "@/config/paths";
@@ -11,17 +10,19 @@ const classes = {
 };
 
 export default function About() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   return (
     <main className={classes.main}>
-      <Button onClick={() => setIsOpen(!isOpen)}>Open</Button>
+      <Button onClick={() => setIsMenuOpen(!isMenuOpen)}>Open</Button>
 
-      <DropdownMenu isOpen={isOpen}>
+      <DropdownMenu isOpen={isMenuOpen}>
         <Flex direction="column" gap="2">
-          <NextLink href={paths.about.root.getHref()}>
-            <Button>About</Button>
-          </NextLink>
-          <Button onClick={() => router.push("/til")}>Today I Learned</Button>
+          <Link href={paths.home.getHref()} tabIndex={-1}>
+            <Button className="w-full">Home</Button>
+          </Link>
+          <Link href={paths.about.getHref()} tabIndex={-1}>
+            <Button className="w-full">About</Button>
+          </Link>
         </Flex>
       </DropdownMenu>
     </main>

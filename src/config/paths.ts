@@ -4,8 +4,6 @@ export const paths = {
   },
 
   about: {
-    root: {
-      getHref: () => "/about",
-    },
+    getHref: () => "/about",
   },
 } as const;
