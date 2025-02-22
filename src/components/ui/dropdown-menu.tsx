@@ -1,9 +1,8 @@
-"use client";
-import { useState } from "react";
 import { cn } from "@/utils/cn";
 
 export type DropdownMenuProps = {
   className?: string;
+  isOpen?: boolean;
   children: React.ReactNode;
 };
 
@@ -12,12 +11,11 @@ const classes = {
 };
 
 export const DropdownMenu = ({
+  isOpen,
   className,
   children,
   ...props
 }: DropdownMenuProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <div
@@ -30,7 +28,6 @@ export const DropdownMenu = ({
       >
         {children}
       </div>
-      <button onClick={() => setIsOpen(!isOpen)}>refresh</button>
     </>
   );
 };

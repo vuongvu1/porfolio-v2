@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import "animate.css";
 import "./globals.css";
 
@@ -21,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntuMono.variable} antialiased`}>{children}</body>
+      <body className={`${ubuntuMono.variable} antialiased`}>
+        <Theme accentColor="iris">{children}</Theme>
+      </body>
     </html>
   );
 }

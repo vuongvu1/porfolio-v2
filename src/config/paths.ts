@@ -3,9 +3,9 @@ export const paths = {
     getHref: () => "/",
   },
 
-  app: {
+  about: {
     root: {
-      getHref: () => "/app",
+      getHref: () => "/about",
     },
   },
 } as const;
