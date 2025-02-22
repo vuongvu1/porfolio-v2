@@ -14,8 +14,8 @@ export default function Home() {
   const router = useRouter();
 
   const handleNavigationClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    const target = event.currentTarget.href;
     event.preventDefault();
+    const target = event.currentTarget.href;
     setIsMenuOpen(!isMenuOpen);
     setTimeout(() => router.push(target), 500);
   };
@@ -24,9 +24,6 @@ export default function Home() {
     <main className={classes.main}>
       <DropdownMenu isOpen={isMenuOpen}>
         <Flex direction="column" gap="2">
-          <Button variant="outline" className="w-fit">
-            Back
-          </Button>
           <Button className="w-full" asChild>
             <a href={paths.about.getHref()} onClick={handleNavigationClick}>
               About
