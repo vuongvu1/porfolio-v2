@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
+import "animate.css";
 import "./globals.css";
 
 const ubuntuMono = Ubuntu_Mono({
