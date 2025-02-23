@@ -1,6 +1,5 @@
 "use client";
 
-import { Flex } from "@radix-ui/themes";
 import { MenuPanel, MenuItem } from "@/components/menu-panel";
 import { paths } from "@/config/paths";
 
@@ -12,9 +11,7 @@ export default function Home() {
   return (
     <main className={classes.main}>
       <MenuPanel>
-        <Flex direction="column" gap="2">
-          <MenuItem href={paths.about.getHref()}>About</MenuItem>
-        </Flex>
+        <MenuItem href={paths.about.getHref()}>About</MenuItem>
       </MenuPanel>
     </main>
   );

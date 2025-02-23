@@ -1,3 +1,4 @@
+import { Flex } from "@radix-ui/themes";
 import { cn } from "@/utils/cn";
 import { MenuPanelProvider } from "./menu-context-provider";
 import { useMenuContext } from "./use-menu-context";
@@ -8,7 +9,7 @@ export type MenuPanelProps = {
 };
 
 const classes = {
-  root: "animate__animated min-w-[300px] w-3/12 bg-white rounded-md shadow-md p-2 fixed z-10 left-10 top-10 border border-gray-200",
+  root: "animate__animated min-w-[200px] w-3/12 bg-white rounded-md shadow-md p-2 fixed z-10 left-10 top-10 border border-gray-200",
 };
 
 const MenuPanelBase = ({ className, children, ...props }: MenuPanelProps) => {
@@ -22,7 +23,9 @@ const MenuPanelBase = ({ className, children, ...props }: MenuPanelProps) => {
       )}
       {...props}
     >
-      {children}
+      <Flex direction="column" gap="2">
+        {children}
+      </Flex>
     </div>
   );
 };
