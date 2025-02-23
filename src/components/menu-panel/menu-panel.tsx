@@ -1,7 +1,6 @@
 import { Flex } from "@radix-ui/themes";
 import { cn } from "@/utils/cn";
-import { MenuPanelProvider } from "./menu-context-provider";
-import { useMenuContext } from "./use-menu-context";
+import { useMenuContext } from "./menu-provider";
 
 export type MenuPanelProps = {
   className?: string;
@@ -12,10 +11,14 @@ const classes = {
   root: "animate__animated min-w-[200px] w-3/12 bg-white rounded-md shadow-md p-2 fixed z-10 left-10 top-10 border border-gray-200",
 };
 
-const MenuPanelBase = ({ className, children, ...props }: MenuPanelProps) => {
+export const MenuPanel = ({
+  className,
+  children,
+  ...props
+}: MenuPanelProps) => {
   const { isOpen } = useMenuContext();
   return (
-    <div
+    <nav
       className={cn(
         classes.root,
         isOpen ? "animate__bounceInDown" : "animate__bounceOutUp",
@@ -26,14 +29,6 @@ const MenuPanelBase = ({ className, children, ...props }: MenuPanelProps) => {
       <Flex direction="column" gap="2">
         {children}
       </Flex>
-    </div>
-  );
-};
-
-export const MenuPanel = (props: MenuPanelProps) => {
-  return (
-    <MenuPanelProvider>
-      <MenuPanelBase {...props} />
-    </MenuPanelProvider>
+    </nav>
   );
 };

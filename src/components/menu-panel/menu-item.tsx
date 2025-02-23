@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@radix-ui/themes";
-import { useMenuContext } from "./use-menu-context";
+import { useMenuContext } from "./menu-provider";
 
 export type MenuItemProps = {
   className?: string;
