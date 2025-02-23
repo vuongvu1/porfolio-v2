@@ -1,5 +1,6 @@
-import { MenuPanel, MenuItem } from "@/components/menu-panel";
 import { paths } from "@/config/paths";
+import { MenuPanel, MenuItem } from "@/components/menu-panel";
+import { MainContent } from "@/components/main-content";
 import { AppProvider } from "./provider";
 
 const classes = {
@@ -13,6 +14,7 @@ export default function Home() {
         <MenuPanel>
           <MenuItem href={paths.about.getHref()}>About</MenuItem>
         </MenuPanel>
+        <MainContent title="Home" />
       </AppProvider>
     </div>
   );
