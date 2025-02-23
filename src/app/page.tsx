@@ -1,10 +1,7 @@
 "use client";
-import {
-  DropdownMenu,
-  DropdownMenuItem,
-  DropdownMenuProvider,
-} from "@/components/dropdown-menu";
+
 import { Flex } from "@radix-ui/themes";
+import { MenuPanel, MenuItem } from "@/components/menu-panel";
 import { paths } from "@/config/paths";
 
 const classes = {
@@ -14,15 +11,11 @@ const classes = {
 export default function Home() {
   return (
     <main className={classes.main}>
-      <DropdownMenuProvider>
-        <DropdownMenu>
-          <Flex direction="column" gap="2">
-            <DropdownMenuItem href={paths.about.getHref()}>
-              About
-            </DropdownMenuItem>
-          </Flex>
-        </DropdownMenu>
-      </DropdownMenuProvider>
+      <MenuPanel>
+        <Flex direction="column" gap="2">
+          <MenuItem href={paths.about.getHref()}>About</MenuItem>
+        </Flex>
+      </MenuPanel>
     </main>
   );
 }

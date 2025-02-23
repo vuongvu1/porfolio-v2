@@ -17,7 +17,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--default-font-family);
 }
 
 .radix-themes {
@@ -30,4 +30,5 @@ body {
   --cursor-slider-thumb: grab;
   --cursor-slider-thumb-active: grabbing;
   --cursor-switch: pointer;
+  --default-font-family: "Ubuntu Mono", sans-serif;
 }

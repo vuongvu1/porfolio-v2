@@ -14,7 +14,6 @@ const ubuntuMono = Ubuntu_Mono({
 export const metadata: Metadata = {
   title: "Portfolio v2",
   description: "This is my portfolio 2nd version",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
@@ -23,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ubuntuMono.variable} antialiased`}>
-        <Theme accentColor="cyan">{children}</Theme>
+        <Theme accentColor="cyan" scaling="110%">
+          {children}
+        </Theme>
       </body>
     </html>
   );
