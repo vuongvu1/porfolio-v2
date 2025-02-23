@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@radix-ui/themes";
-import { useMenuContext } from "./menu-provider";
+import { useAppContext } from "@/app/provider";
 
 export type MenuItemProps = {
   className?: string;
@@ -18,12 +18,12 @@ export const MenuItem = ({
   ...props
 }: MenuItemProps) => {
   const router = useRouter();
-  const { isOpen, setIsOpen } = useMenuContext();
+  const { isShow, setIsShow } = useAppContext();
 
   const handleNavigationClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const target = event.currentTarget.href;
-    setIsOpen(!isOpen);
+    setIsShow(!isShow);
     setTimeout(() => router.push(target), TRANSITION_DURATION);
   };
 

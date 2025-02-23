@@ -1,6 +1,6 @@
 import { Flex } from "@radix-ui/themes";
 import { cn } from "@/utils/cn";
-import { useMenuContext } from "./menu-provider";
+import { useAppContext } from "@/app/provider";
 
 export type MenuPanelProps = {
   className?: string;
@@ -16,12 +16,12 @@ export const MenuPanel = ({
   children,
   ...props
 }: MenuPanelProps) => {
-  const { isOpen } = useMenuContext();
+  const { isShow } = useAppContext();
   return (
     <nav
       className={cn(
         classes.root,
-        isOpen ? "animate__bounceInDown" : "animate__bounceOutUp",
+        isShow ? "animate__bounceInDown" : "animate__bounceOutUp",
         className
       )}
       {...props}
