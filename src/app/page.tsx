@@ -3,7 +3,7 @@ import {
   DropdownMenu,
   DropdownMenuItem,
   DropdownMenuProvider,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/dropdown-menu";
 import { Flex } from "@radix-ui/themes";
 import { paths } from "@/config/paths";
 
