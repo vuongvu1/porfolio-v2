@@ -1,5 +1,3 @@
-"use client";
-
 import { MenuPanel, MenuItem } from "@/components/menu-panel";
 import { paths } from "@/config/paths";
 
