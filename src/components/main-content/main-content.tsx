@@ -5,20 +5,22 @@ import { cn } from "@/utils/cn";
 
 interface MainContentProps {
   title: string;
+  className?: string;
 }
 
 const classes = {
-  main: "animate__animated min-w-[400px] w-6/12 bg-white rounded-md shadow-md p-2 fixed z-10 right-10 top-10 border border-gray-200",
+  main: "animate__animated min-w-[400px] w-6/12 bg-white rounded-md shadow-md p-2 border border-gray-200",
 };
 
-export const MainContent: FC<MainContentProps> = ({ title }) => {
+export const MainContent: FC<MainContentProps> = ({ title, className }) => {
   const { isShow } = useAppContext();
 
   return (
     <main
       className={cn(
         classes.main,
-        isShow ? "animate__bounceInRight" : "animate__bounceOutRight"
+        isShow ? "animate__bounceInRight" : "animate__bounceOutRight",
+        className
       )}
     >
       <h1>{title}</h1>

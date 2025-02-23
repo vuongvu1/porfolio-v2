@@ -8,7 +8,7 @@ export type MenuPanelProps = {
 };
 
 const classes = {
-  root: "animate__animated min-w-[200px] w-3/12 bg-white rounded-md shadow-md p-2 fixed z-10 left-10 top-10 border border-gray-200",
+  root: "animate__animated min-w-[200px] w-3/12 bg-white rounded-md shadow-md p-2 border border-gray-200",
 };
 
 export const MenuPanel = ({
