@@ -29,7 +29,12 @@ export const MenuItem = ({
 
   return (
     <Button variant="classic" className="w-full" asChild>
-      <a href={href} onClick={handleNavigationClick} {...props}>
+      <a
+        href={href}
+        onClick={handleNavigationClick}
+        className={className}
+        {...props}
+      >
         {children}
       </a>
     </Button>
