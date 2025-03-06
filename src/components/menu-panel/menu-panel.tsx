@@ -1,3 +1,4 @@
+"use client";
 import { Flex } from "@radix-ui/themes";
 import { cn } from "@/utils/cn";
 import { useAppContext } from "@/app/provider";

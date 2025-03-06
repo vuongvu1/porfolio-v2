@@ -1,3 +1,4 @@
+"use client";
 import { MouseEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@radix-ui/themes";
