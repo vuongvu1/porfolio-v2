@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Grid } from "@radix-ui/themes";
 import { VT323 } from "next/font/google";
 import { Theme } from "@radix-ui/themes";
 import { AppProvider } from "./provider";
@@ -25,9 +26,14 @@ export default function RootLayout({
       <body className={`${vt323.variable} antialiased`}>
         <AppProvider>
           <Theme accentColor="cyan" scaling="110%">
-            <div className="h-[100vh] w-[100vw] p-8 flex items-start justify-center gap-4">
+            <Grid
+              columns="4"
+              rows="4"
+              gap="4"
+              className="w-[100vw] max-w-screen-lg m-auto p-2 sm:p-4 md:p-8"
+            >
               {children}
-            </div>
+            </Grid>
           </Theme>
         </AppProvider>
       </body>

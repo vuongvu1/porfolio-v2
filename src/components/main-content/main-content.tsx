@@ -9,7 +9,7 @@ interface MainContentProps {
 }
 
 const classes = {
-  main: "animate__animated min-w-[400px] w-6/12 bg-white rounded-md shadow-md p-2 border border-gray-200",
+  main: "animate__animated bg-white rounded-md shadow-md p-2 border border-gray-200 overflow-auto scroll-behavior-smooth max-h-full",
 };
 
 export const MainContent: FC<MainContentProps> = ({ title, className }) => {
@@ -25,6 +25,36 @@ export const MainContent: FC<MainContentProps> = ({ title, className }) => {
     >
       <h1>{title}</h1>
       <section>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
+        <p>This is the main content area of your portfolio.</p>
         <p>This is the main content area of your portfolio.</p>
         <p>This is the main content area of your portfolio.</p>
         <p>This is the main content area of your portfolio.</p>
