@@ -18,17 +18,23 @@ export const MenuItem = ({
   ...props
 }: MenuItemProps) => {
   const router = useRouter();
-  const { isShow, setIsShow } = useAppContext();
+  const { setIsShow } = useAppContext();
+
+  const toggleMenu = () => setIsShow((isShow) => !isShow);
 
   const handleNavigationClick = (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const target = event.currentTarget.href;
-    setIsShow(!isShow);
-    setTimeout(() => router.push(target), TRANSITION_DURATION);
+    toggleMenu();
+
+    setTimeout(() => {
+      router.push(target);
+      toggleMenu();
+    }, TRANSITION_DURATION);
   };
 
   return (
-    <Button variant="classic" className="w-full" asChild>
+    <Button className="w-full" asChild>
       <a
         href={href}
         onClick={handleNavigationClick}

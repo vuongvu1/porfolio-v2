@@ -3,7 +3,7 @@ import { createContext, useState, ReactNode, useContext } from "react";
 
 type AppContextType = {
   isShow: boolean;
-  setIsShow: (value: boolean) => void;
+  setIsShow: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
 import { Theme } from "@radix-ui/themes";
+import { AppProvider } from "./provider";
 import "animate.css";
 import "@radix-ui/themes/styles.css";
 import "@/styles/globals.css";
@@ -22,9 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ubuntuMono.variable} antialiased`}>
-        <Theme accentColor="cyan" scaling="110%">
-          {children}
-        </Theme>
+        <AppProvider>
+          <Theme accentColor="cyan" scaling="110%">
+            <div className="h-[100vh] w-[100vw] p-8 flex items-start justify-center gap-4">
+              {children}
+            </div>
+          </Theme>
+        </AppProvider>
       </body>
     </html>
   );
