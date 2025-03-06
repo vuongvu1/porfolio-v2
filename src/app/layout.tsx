@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Ubuntu_Mono } from "next/font/google";
+import { VT323 } from "next/font/google";
 import { Theme } from "@radix-ui/themes";
 import { AppProvider } from "./provider";
 import "animate.css";
 import "@radix-ui/themes/styles.css";
 import "@/styles/globals.css";
 
-const ubuntuMono = Ubuntu_Mono({
-  variable: "--font-ubuntu-mono",
+const vt323 = VT323({
+  variable: "--font-vt323",
   subsets: ["latin"],
-  weight: "700",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntuMono.variable} antialiased`}>
+      <body className={`${vt323.variable} antialiased`}>
         <AppProvider>
           <Theme accentColor="cyan" scaling="110%">
             <div className="h-[100vh] w-[100vw] p-8 flex items-start justify-center gap-4">

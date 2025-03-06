@@ -1,5 +1,5 @@
 "use client";
-import { MouseEvent } from "react";
+import { MouseEvent, ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@radix-ui/themes";
 import { useAppContext } from "@/app/provider";
@@ -7,7 +7,7 @@ import { useAppContext } from "@/app/provider";
 export type MenuItemProps = {
   className?: string;
   href?: string;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const TRANSITION_DURATION = 500;

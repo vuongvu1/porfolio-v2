@@ -1,9 +1,16 @@
 "use client";
-import { createContext, useState, ReactNode, useContext } from "react";
+import {
+  createContext,
+  useState,
+  ReactNode,
+  useContext,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 type AppContextType = {
   isShow: boolean;
-  setIsShow: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsShow: Dispatch<SetStateAction<boolean>>;
 };
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
