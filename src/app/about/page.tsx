@@ -1,4 +1,5 @@
 import { Box } from "@radix-ui/themes";
+
 import { MenuPanel, MenuItem } from "@/components/menu-panel";
 import { MainContent } from "@/components/main-content";
 import { paths } from "@/config/paths";
