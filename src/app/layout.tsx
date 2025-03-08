@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { Grid, Theme } from "@radix-ui/themes";
-import { VT323 } from "next/font/google";
+import { Ubuntu_Mono } from "next/font/google";
 import "animate.css";
 import "@radix-ui/themes/styles.css";
 
 import "@/styles/globals.css";
 import { AppProvider } from "./provider";
 
-const vt323 = VT323({
-  variable: "--font-vt323",
+const ubuntuMono = Ubuntu_Mono({
+  variable: "--font-ubuntu-mono",
   subsets: ["latin"],
-  weight: "400",
+  weight: "700",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${vt323.variable} antialiased`}>
+      <body className={`${ubuntuMono.variable} antialiased`}>
         <AppProvider>
           <Theme accentColor="cyan" scaling="110%">
             <Grid
