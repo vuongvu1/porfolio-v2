@@ -10,12 +10,13 @@ export default function About() {
       <Box gridRow="1 / 2">
         <MenuPanel>
           <MenuItem href={paths.home.getHref()}>HOME</MenuItem>
-          <MenuItem href={paths.home.getHref()}>HOME</MenuItem>
-          <MenuItem href={paths.home.getHref()}>HOME</MenuItem>
+          <MenuItem href={paths.home.getHref()} variant="secondary">
+            ↵ BACK
+          </MenuItem>
         </MenuPanel>
       </Box>
       <Box gridColumn="2 / 5" gridRow="1 / 5">
-        <MainContent title="About" />
+        <MainContent title="MUSIC" />
       </Box>
     </>
   );

@@ -1,21 +1,22 @@
 import { Box } from "@radix-ui/themes";
-import { paths } from "@/config/paths";
+
 import { MenuPanel, MenuItem } from "@/components/menu-panel";
 import { MainContent } from "@/components/main-content";
+import { paths } from "@/config/paths";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Box gridRow="1 / 2">
         <MenuPanel>
           <MenuItem href={paths.home.getHref()}>HOME</MenuItem>
-          <MenuItem href={paths.music.getHref()}>♪ ♫ ♬</MenuItem>
-          <MenuItem href={paths.til.getHref()}>TIL</MenuItem>
-          <MenuItem href={paths.contact.getHref()}>CONTACT</MenuItem>
+          <MenuItem href={paths.home.getHref()} variant="secondary">
+            ↵ BACK
+          </MenuItem>
         </MenuPanel>
       </Box>
       <Box gridColumn="2 / 5" gridRow="1 / 5">
-        <MainContent title="Home" />
+        <MainContent title="MUSIC" />
       </Box>
     </>
   );

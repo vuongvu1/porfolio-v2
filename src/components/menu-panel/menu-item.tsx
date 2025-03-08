@@ -9,6 +9,7 @@ export type MenuItemProps = {
   className?: string;
   href?: string;
   children: ReactNode;
+  variant?: "primary" | "secondary";
 };
 
 const TRANSITION_DURATION = 500;
@@ -17,6 +18,7 @@ export const MenuItem = ({
   href,
   className,
   children,
+  variant,
   ...props
 }: MenuItemProps) => {
   const router = useRouter();
@@ -36,7 +38,11 @@ export const MenuItem = ({
   };
 
   return (
-    <Button className="w-full" asChild>
+    <Button
+      className="w-full"
+      variant={variant === "secondary" ? "outline" : "solid"}
+      asChild
+    >
       <a
         href={href}
         onClick={handleNavigationClick}

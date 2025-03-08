@@ -2,8 +2,13 @@ export const paths = {
   home: {
     getHref: () => "/",
   },
-
-  about: {
-    getHref: () => "/about",
+  music: {
+    getHref: () => "/music",
+  },
+  til: {
+    getHref: () => "/til",
+  },
+  contact: {
+    getHref: () => "/contact",
   },
 } as const;
