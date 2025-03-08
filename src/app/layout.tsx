@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Grid } from "@radix-ui/themes";
+import { Grid, Theme } from "@radix-ui/themes";
 import { VT323 } from "next/font/google";
-import { Theme } from "@radix-ui/themes";
 import "animate.css";
 import "@radix-ui/themes/styles.css";
-import "@/styles/globals.css";
 
+import "@/styles/globals.css";
 import { AppProvider } from "./provider";
 
 const vt323 = VT323({
