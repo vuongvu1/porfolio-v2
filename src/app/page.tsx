@@ -1,7 +1,6 @@
 import { Box } from "@radix-ui/themes";
 import { paths } from "@/config/paths";
-import { MenuPanel, MenuItem } from "@/components/menu-panel";
-import { MainContent } from "@/components/main-content";
+import { MenuPanel, MenuItem, MainContent } from "@/components";
 
 export default function Home() {
   return (

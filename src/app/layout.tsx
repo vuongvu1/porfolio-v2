@@ -5,7 +5,8 @@ import "animate.css";
 import "@radix-ui/themes/styles.css";
 
 import "@/styles/globals.css";
-import { AppProvider } from "./provider";
+import { AppProvider } from "@/app/provider";
+import { AnimatedLogo } from "@/components";
 
 const ubuntuMono = Ubuntu_Mono({
   variable: "--font-ubuntu-mono",
@@ -33,6 +34,7 @@ export default function RootLayout({
               className="w-[100vw] max-w-screen-lg m-auto p-2 sm:p-4 md:p-8"
             >
               {children}
+              <AnimatedLogo logoSrc="/ship-wheel.svg" alt="" />
             </Grid>
           </Theme>
         </AppProvider>
