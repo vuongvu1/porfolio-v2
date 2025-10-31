@@ -24,7 +24,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntuMono.variable} antialiased`}>
+      <body className={`${ubuntuMono.variable} antialiased overflow-x-hidden`}>
         <AppProvider>
           <Theme accentColor="cyan" scaling="110%">
             <Grid
